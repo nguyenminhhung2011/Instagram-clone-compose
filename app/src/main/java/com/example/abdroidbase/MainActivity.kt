@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -65,7 +66,7 @@ fun BottomNavBar(navController: NavHostController) {
     )
 
     BottomNavigation() {
-        screens.forEach { screen -> 
+        screens.forEach { screen ->
             BottomNavigationItem(
                 selected = currentDestination?.route == screen.route ,
                 onClick = {navController.navigate(screen.route)},
@@ -100,7 +101,16 @@ fun CircleAvatarView(avatarUrl: String){
     )
 }
 
+@Composable
 @Preview(showBackground = true)
+fun AppBar() {
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .padding(10.dp)){
+        Image(painter = painterResource(id = R.drawable.instagram), contentDescription = "logo" )
+    }
+}
+
 @Composable
 fun ProfileView(){
     CircleAvatarView(avatarUrl = "")

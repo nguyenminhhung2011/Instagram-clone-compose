@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Divider
+import androidx.compose.material.IconButton
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -30,7 +31,11 @@ fun HomeScreen(){
     Column(modifier = Modifier.fillMaxSize()) {
         AppBar()
         StoriesSection(listStories = getStories())
-        Divider(Modifier.fillMaxWidth().padding(vertical = 5.dp).height(2.dp))
+        Divider(
+            Modifier
+                .fillMaxWidth()
+                .padding(vertical = 5.dp)
+                .height(1.5.dp))
         PostsSection()
     }
 }
@@ -55,17 +60,21 @@ fun AppBar(){
             .height(50.dp)
             .align(Alignment.TopStart))
         Row(modifier = Modifier.align(Alignment.CenterEnd)) {
-            Image(painter = painterResource(id = R.drawable.more), contentDescription = "create_post", modifier = Modifier
-                .size(20.dp)
-            )
-            Spacer(modifier = Modifier.width(10.dp))
-            Image(painter = painterResource(id = R.drawable.love), contentDescription = "create_post", modifier = Modifier
-                .size(22.dp)
-            )
-            Spacer(modifier = Modifier.width(10.dp))
-            Image(painter = painterResource(id = R.drawable.chat), contentDescription = "create_post", modifier = Modifier
-                .size(23.dp)
-            )
+            IconButton(onClick = {}) {
+                Image(painter = painterResource(id = R.drawable.more), contentDescription = "create_post", modifier = Modifier
+                    .size(20.dp)
+                )
+            }
+            IconButton(onClick = {}) {
+                Image(painter = painterResource(id = R.drawable.love), contentDescription = "create_post", modifier = Modifier
+                    .size(22.dp)
+                )
+            }
+            IconButton(onClick = {}) {
+                Image(painter = painterResource(id = R.drawable.chat), contentDescription = "create_post", modifier = Modifier
+                    .size(23.dp)
+                )
+            }
         }
     }
 }

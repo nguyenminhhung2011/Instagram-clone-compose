@@ -1,4 +1,4 @@
-package com.example.abdroidbase.model
+package com.example.abdroidbase.data.model
 
 import com.example.abdroidbase.enum.TypeMessage
 import java.util.Date

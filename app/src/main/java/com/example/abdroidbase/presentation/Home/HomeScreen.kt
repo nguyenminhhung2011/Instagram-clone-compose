@@ -13,8 +13,11 @@ import androidx.compose.ui.text.font.*
 import androidx.compose.ui.text.style.*
 import androidx.compose.ui.unit.*
 import androidx.core.graphics.*
+import coil.compose.AsyncImage
 import com.example.abdroidbase.R
-import com.example.abdroidbase.model.Stories
+import com.example.abdroidbase.core.widgets.PostItem
+import com.example.abdroidbase.data.model.Post
+import com.example.abdroidbase.data.model.Stories
 
 @Composable
 fun HomeScreen() {
@@ -28,6 +31,14 @@ fun HomeScreen() {
                 .height(1.5.dp)
         )
         PostsSection()
+//        AsyncImage(model = "https://img.freepik.com/free-icon/android_318-674214.jpg", contentDescription ="")
+//        PostItem(post = Post(
+//            listOf(
+//                "https://img.freepik.com/free-icon/android_318-674214.jpg",
+//                "https://img.freepik.com/free-icon/android_318-674214.jpg",
+//                "https://img.freepik.com/free-icon/android_318-674214.jpg"
+//            )
+//        ))
     }
 }
 
@@ -35,7 +46,9 @@ private fun getStories() = List(6) { Stories(userName = "Hung", profile = R.draw
 
 @Composable
 fun AppBar() {
-    Box(modifier = Modifier.fillMaxWidth().padding(10.dp)) {
+    Box(modifier = Modifier
+        .fillMaxWidth()
+        .padding(10.dp)) {
         Image(
             painter = painterResource(id = R.drawable.instagram),
             contentDescription = "logo",
@@ -117,7 +130,9 @@ fun StoryItem(stories: Stories) {
 
 @Composable
 fun PostsSection() {
-    Box(modifier = Modifier.fillMaxWidth().padding(10.dp)) {
+    Box(modifier = Modifier
+        .fillMaxWidth()
+        .padding(10.dp)) {
 
     }
 }

@@ -1,4 +1,4 @@
 package com.example.abdroidbase.domain;
 
-public class d {
+public class index {
 }

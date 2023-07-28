@@ -1,11 +1,15 @@
 package com.example.abdroidbase
 
+import HomeScreen
+import NotificationScreen
+import ProfileScreen
+import ReelsScreen
+import SearchScreen
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.abdroidbase.enum.BottomNavRoutes
-import com.example.abdroidbase.screens.*
 
 @Composable
 fun AppNavGraph(navHostController: NavHostController) {

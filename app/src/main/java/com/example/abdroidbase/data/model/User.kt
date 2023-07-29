@@ -1,8 +1,7 @@
 package com.example.abdroidbase.data.model
 
-import android.os.health.UidHealthStats
 
-data class User (
+data class User(
     val uid: String,
     val password: String,
     val photoUrl: String,

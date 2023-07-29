@@ -13,36 +13,71 @@ import androidx.compose.ui.text.font.*
 import androidx.compose.ui.text.style.*
 import androidx.compose.ui.unit.*
 import androidx.core.graphics.*
-import coil.compose.AsyncImage
 import com.example.abdroidbase.R
 import com.example.abdroidbase.core.widgets.PostItem
 import com.example.abdroidbase.data.model.Post
 import com.example.abdroidbase.data.model.Stories
+import com.example.abdroidbase.data.model.User
+import com.example.abdroidbase.ui.theme.primaryColor
 
 @Composable
 fun HomeScreen() {
-    Column(modifier = Modifier.fillMaxSize()) {
-        AppBar()
-        StoriesSection(listStories = getStories())
-        Divider(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 5.dp)
-                .height(1.5.dp)
-        )
-        PostsSection()
-//        AsyncImage(model = "https://img.freepik.com/free-icon/android_318-674214.jpg", contentDescription ="")
-//        PostItem(post = Post(
-//            listOf(
-//                "https://img.freepik.com/free-icon/android_318-674214.jpg",
-//                "https://img.freepik.com/free-icon/android_318-674214.jpg",
-//                "https://img.freepik.com/free-icon/android_318-674214.jpg"
-//            )
-//        ))
+    LazyColumn{
+        item {
+            AppBar()
+            StoriesSection(listStories = getStories())
+            Divider(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 5.dp)
+                    .height(0.5.dp),
+                color = Color.Gray
+            )
+            PostsSection()
+            PostItem(post = Post(
+                "This is description",
+                favorites = getBasicUser(),
+                listOf(
+                    "https://cdn.wallpapersafari.com/92/44/JoVfDA.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRctnGJzoq2f8J_vkXyWLjI0nmBQfnmcETD-oD-cR1TX858hLp_dFSPsFNZar_IMl9NA&usqp=CAU",
+                    "https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg"
+                )
+            ),
+                user = getBasicUser().first()
+            )
+            PostItem(post = Post(
+                "This is description",
+                favorites = getBasicUser(),
+                listOf(
+                    "https://cdn.wallpapersafari.com/92/44/JoVfDA.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRctnGJzoq2f8J_vkXyWLjI0nmBQfnmcETD-oD-cR1TX858hLp_dFSPsFNZar_IMl9NA&usqp=CAU",
+                    "https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg"
+                )
+            ),
+                user = getBasicUser().first()
+            )
+            Spacer(modifier = Modifier.height(80.dp))
+        }
     }
 }
 
 private fun getStories() = List(6) { Stories(userName = "Hung", profile = R.drawable.profile) }
+
+private fun getBasicUser() = List<User>(100) {
+    User(
+        "userId",
+        "123456",
+        "https://img.freepik.com/free-icon/android_318-674214.jpg",
+        "This is bio",
+        emptyList(),
+        emptyList(),
+        R.drawable.profile,
+        "Nguyen Minh Hung",
+        0,
+        "Description, " ,
+        emptyList()
+    )
+}
 
 @Composable
 fun AppBar() {
@@ -104,7 +139,7 @@ fun StoryItem(stories: Stories) {
                     width = 2.dp,
                     brush = Brush.linearGradient(
                         colors = listOf(
-                            Color("#DE0046".toColorInt()),
+                            primaryColor,
                             Color("#F7A348".toColorInt())
                         )
                     ),

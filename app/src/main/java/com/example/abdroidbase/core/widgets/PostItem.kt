@@ -173,7 +173,7 @@ fun PostItem(post: Post, user: User){
 
 @Preview
 @Composable
-fun preview(){
+fun Preview(){
     LazyRow(horizontalArrangement = Arrangement.spacedBy((-10).dp),
         modifier = Modifier.padding(horizontal = 18.dp)){
         item{

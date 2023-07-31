@@ -13,15 +13,19 @@ import androidx.compose.ui.text.font.*
 import androidx.compose.ui.text.style.*
 import androidx.compose.ui.unit.*
 import androidx.core.graphics.*
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.abdroidbase.R
 import com.example.abdroidbase.core.widgets.PostItem
 import com.example.abdroidbase.data.model.Post
 import com.example.abdroidbase.data.model.Stories
 import com.example.abdroidbase.data.model.User
+import com.example.abdroidbase.presentation.Home.ViewModel.HomeScreenViewModel
 import com.example.abdroidbase.ui.theme.primaryColor
 
 @Composable
 fun HomeScreen() {
+    val viewModel = viewModel<HomeScreenViewModel>()
+//    val state by viewModel.s
     LazyColumn{
         item {
             AppBar()

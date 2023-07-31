@@ -58,7 +58,7 @@ fun PostItem(post: Post, user: User){
                         overflow = TextOverflow.Ellipsis,
                         style = headerStyle
                     )
-                    Text(text = user.bio, fontWeight = FontWeight(500),
+                    Text(text = user.bio, fontWeight = FontWeight   (500),
                         fontSize = 10.sp, overflow = TextOverflow.Ellipsis,
                         color = Color.Gray
                     )
@@ -195,10 +195,6 @@ fun Preview(){
                     contentScale = ContentScale.Crop,
                 )
             }
-//            Text(text = " and ${post.favorites.size} likes",
-//                style = headerStyle,
-//                modifier = Modifier.padding(horizontal = 20.dp)
-//            )
         }
     }
 }

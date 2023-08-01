@@ -32,6 +32,7 @@ import com.example.abdroidbase.data.model.Post
 import com.example.abdroidbase.data.model.User
 import com.example.abdroidbase.R
 
+
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterialApi::class)
 @Composable
 fun PostItem(post: Post, user: User){

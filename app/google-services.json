@@ -7,22 +7,22 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:273009822669:android:1597f19b9211e7b3e71284",
+        "mobilesdk_app_id": "1:273009822669:android:fe09bef5a4fcd747e71284",
         "android_client_info": {
-          "package_name": "com.example.abdroidbase.presentation"
+          "package_name": "com.example.abdroidbase"
         }
       },
       "oauth_client": [
         {
-          "client_id": "273009822669-c72pamj0d3vt46kd31vsit2mq7lud9vv.apps.googleusercontent.com",
+          "client_id": "273009822669-215abikh2mmecrp20n7lj248eiah4k31.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.abdroidbase.presentation",
+            "package_name": "com.example.abdroidbase",
             "certificate_hash": "a8cc6693d9bd4600bc753eb4f48b4a66a13279cc"
           }
         },
         {
-          "client_id": "273009822669-c3la2a16o5gr1c47jghj3tv18ka4hdvm.apps.googleusercontent.com",
+          "client_id": "273009822669-1002fh87eo0n1tcum71ged8n9b6cu87m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -35,7 +35,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "273009822669-c3la2a16o5gr1c47jghj3tv18ka4hdvm.apps.googleusercontent.com",
+              "client_id": "273009822669-1002fh87eo0n1tcum71ged8n9b6cu87m.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

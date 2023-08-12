@@ -1,4 +1,4 @@
-package com.example.abdroidbase.enum
+package com.example.abdroidbase.core.widgets.enum
 
 enum class TypeMessage(val type: Int) {
     SENT(0),

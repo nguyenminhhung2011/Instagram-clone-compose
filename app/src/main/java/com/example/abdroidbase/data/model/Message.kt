@@ -1,6 +1,6 @@
 package com.example.abdroidbase.data.model
 
-import com.example.abdroidbase.enum.TypeMessage
+import com.example.abdroidbase.core.widgets.enum.TypeMessage
 import java.util.Date
 
 data class Message(

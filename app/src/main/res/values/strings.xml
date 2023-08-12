@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Abdroid base</string>
+    <string name="app_name">Android base</string>
+    <string name="my_garden">My garden</string>
+    <string name="plant_list">Plant list</string>
 </resources>

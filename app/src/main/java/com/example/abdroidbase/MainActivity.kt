@@ -1,5 +1,6 @@
 package com.example.abdroidbase
 
+import BottomNaves
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -20,9 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.abdroidbase.enum.BottomNavRoutes
 import com.example.abdroidbase.ui.theme.AbdroidBaseTheme
-import com.example.abdroidbase.core.widgets.BottomNaves
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

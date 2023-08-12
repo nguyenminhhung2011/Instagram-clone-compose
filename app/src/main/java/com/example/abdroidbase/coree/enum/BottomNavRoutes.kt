@@ -1,5 +1,3 @@
-package com.example.abdroidbase.enum
-
 enum class BottomNavRoutes(val route: String) {
     HOME("home"),
     SEARCH("search"),

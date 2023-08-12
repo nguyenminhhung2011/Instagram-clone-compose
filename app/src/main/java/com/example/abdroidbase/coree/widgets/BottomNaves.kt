@@ -1,7 +1,5 @@
-package com.example.abdroidbase.core.widgets
 
 import com.example.abdroidbase.R
-import com.example.abdroidbase.enum.BottomNavRoutes
 
 
 sealed class BottomNaves(
